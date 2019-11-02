@@ -1,15 +1,11 @@
 <?php
 
- $eleves = [
-   "cm2" => ["Jean", "Marc", "Jane","Marion"],
-   "cm1" =>["tekken", "Street"]
+$mot = readline("Veuillez entrer un mot ");
 
- ];
+$reverse = strrev($mot);
 
- foreach($eleves as $classe => $listEleves) {
-   echo "la class $classe:\n";
-    foreach($listEleves as $eleve){
+$paylindrom = $reverse=== $mot ? "ok": "bo";
 
-      echo "- $eleve \n";
-    } 
- }
+echo $paylindrom;
+
+

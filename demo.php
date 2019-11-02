@@ -1,14 +1,15 @@
 <?php
 
-$action = (int)(readline("entrez votre action: (1, atk, 2 def, 3 nothing"));
+ $eleves = [
+   "cm2" => ["Jean", "Marc", "Jane","Marion"],
+   "cm1" =>["tekken", "Street"]
 
-switch($action){
- case 1 :
- echo" achso a l'attaque";
- case 2 :
- echo" achso a la def";
- case 3:
- echo" nopthing a e";
- default: "echo erreur";
-}
+ ];
 
+ foreach($eleves as $classe => $listEleves) {
+   echo "la class $classe:\n";
+    foreach($listEleves as $eleve){
+
+      echo "- $eleve \n";
+    } 
+ }

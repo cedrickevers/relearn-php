@@ -1,17 +1,14 @@
 <?php
 
-$classe = [
-  [  "nom"=>"jean",
-    "prenom"=>"charles",
-    "notes"=>[1,2,3],
+$action = (int)(readline("entrez votre action: (1, atk, 2 def, 3 nothing"));
 
-  ],
-  [
-    "nom"=>"David",
-    "prenom"=>"chrly",
-    "notes"=>[2,4,8]
+switch($action){
+ case 1 :
+ echo" achso a l'attaque";
+ case 2 :
+ echo" achso a la def";
+ case 3:
+ echo" nopthing a e";
+ default: "echo erreur";
+}
 
-  ]
-  ];
-
-echo $classe[1]["notes"][1];

@@ -1,17 +1,4 @@
-<?php 
-function nav_item(string $lien, string $titre) : string {
 
-    $classe = "nav-item";
-    if($_SERVER['SCRIPT_NAME'] === $lien){
-        $classe = $classe . ' active';
-    }
-    return <<<HTML
-    <li class="$classe">
-        <a class="nav-link" href="$lien">$titre</a>
-    </li>    
-HTML;        
-}
-?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -38,8 +25,7 @@ HTML;
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-        <?= nav_item("/index.php", "Accueil");?>
-      <?= nav_item("/contact.php", "contact");?>
+            <?php require_once("menu.php")?>
         </ul>
       </div>
     </nav>

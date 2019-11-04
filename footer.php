@@ -17,3 +17,23 @@
 </body>
 </html>
 
+
+ 
+// require 'header.php';
+ ?>
+ <?php if($erreur):?>
+ <div class="alert alert-danger">
+    <? $erreur?>
+ </div>
+ <?php elseif ($succes): ?>
+ <div class="alert alert-sucess">
+    <?$succes?>
+ </div>
+ <?php endif?>
+ <?php return $erreur;?>
+
+
+<form action="/jeu.php" method="GET">
+<input type="number" name="chiffre" placeholder = "entre 0 et 1000" value="<?php htmlentities($test) ?>">
+<button type ="submit">Deviner</button>
+</form>

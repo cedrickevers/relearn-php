@@ -20,4 +20,20 @@ function radio (string $name, string $value, array $data): string{
         <input type="radio" name="{$name}" value="$value">
 HTML;        
 }
+
+function dump( $variable) {
+    echo "<pre>";
+    var_dump($variable);
+    echo "</pre>";
+}
+
+function creneaux_html(array $creneaux){
+
+    $phrases = [];
+    foreach ($creneaux as $creneau) {
+        $phrases[] = "de {$creneau[0]}h à {$creneau[1]}";
+
+    }
+    return implode(" et ", $phrases);
+}
 ?>

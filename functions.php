@@ -27,7 +27,7 @@ function dump( $variable) {
     echo "</pre>";
 }
 
-function creneaux_html(array $creneaux){
+function creneaux_html( $creneaux){
 
     $phrases = [];
     foreach ($creneaux as $creneau) {
@@ -35,5 +35,7 @@ function creneaux_html(array $creneaux){
 
     }
     return implode(" et ", $phrases);
-}
+};   
+ 
+ 
 ?>

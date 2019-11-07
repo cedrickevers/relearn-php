@@ -14,6 +14,12 @@ $creneaux =  creneaux_html(CRENEAUX);
     <div class="col-md-4">
         <h2> Horaires d 'ouverture'</h2>
         <?= $creneaux?>
+        <ul>
+        <?php foreach(JOURS as $key => $jour)  : ?>
+            <li>  <strong><?= $jour?></strong> :</li>
+        <?php endforeach ?>
+
+        </ul>
     </div>
     </div>
 </div>

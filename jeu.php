@@ -8,12 +8,23 @@ require_once "functions.php";
 $parfums = ["vanille" => 3, "chocolat" => 4, "pomme"=> 5];
 $cornets = ["corner" => 1.5, "ravier" => 1];
 $suplements = ["Granulé "=>0.5,  "chantilly"=> 5];
+
+$ingredients = [];
+$total = 0;
+if(isset($get_["parfum"])){
+    
+    foreach($parfums as $parfum => $prix){
+        $total .= $prix;
+    }
+}
+
+
 ?>
 
 <div class="row">
 
 <div class="col-md-4">
-
+<?php echo "Le prix est de $total;"?>
 </div>
 <div class="col-md-8">
 
@@ -55,7 +66,6 @@ $suplements = ["Granulé "=>0.5,  "chantilly"=> 5];
      </div>
 </div>
 
-     <?php echo "Le prix est de $prize;"?>
     
 <h2>$_POST</h2>
 <pre>

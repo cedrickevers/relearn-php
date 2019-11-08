@@ -1,7 +1,12 @@
 </main>
 <div class="row">
 
-    <div class="col-md-4"></div>   
+    <div class="col-md-4">
+    <?php 
+    require_once dirname(__DIR__) . DIRECTORY_SEPRATOR . "functions" . DIRECTORY_SEPRATOR . "compteur.php";
+    ?>
+     il a nombre de  <?= nombres_vues() ?> sur le site
+    </div>   
     <div class="col-md-4"></div>   
     <div class="col-md-4">
     <h5>Navigation</h5>    
@@ -18,8 +23,10 @@
 </html>
 
 
- 
-// require 'header.php';
+ <?php
+ require 'header.php';
+ $erreur = null;
+ $succes = null;
  ?>
  <?php if($erreur):?>
  <div class="alert alert-danger">
@@ -37,3 +44,12 @@
 <input type="number" name="chiffre" placeholder = "entre 0 et 1000" value="<?php htmlentities($test) ?>">
 <button type ="submit">Deviner</button>
 </form>
+
+
+
+
+<style>
+.row{
+    margin-top : 15rem;
+}
+</style>
